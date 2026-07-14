@@ -26,7 +26,6 @@ Work in progress. One-way download/import is implemented; robust synchronization
 
 ## Known limitations
 
-- The package and plugin manifest still use the historical “obsidian-supernotes” identifier; changing it requires a migration plan for existing installations.
 - Synchronization is primarily Supernotes-to-Obsidian and conflict handling is incomplete.
 - Remote deletion/disable operations are destructive and need stronger safeguards.
 - API behavior is not covered by contract tests.

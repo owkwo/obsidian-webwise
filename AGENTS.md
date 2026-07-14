@@ -2,7 +2,7 @@
 
 ## Repository
 
-This repository is **obsidian-webwise**, a TypeScript Obsidian-to-Supernotes integration. The repository slug is the canonical project name in documentation and release metadata.
+This repository is **obsidian-webwise**, a TypeScript Supernotes-to-Obsidian integration. The repository slug is the canonical project name in documentation and release metadata.
 
 ## Working rules
 
@@ -27,7 +27,7 @@ If a tool or platform is unavailable, record exactly what was not run and why.
 
 ## Project-specific guidance
 
-Never commit API keys or vault data. Treat remote delete/disable operations as destructive and require explicit safeguards. Preserve the historical plugin ID unless a migration is implemented.
+Never commit API keys or vault data. Treat remote delete/disable operations as destructive and require explicit safeguards.
 
 ## Pull requests
 
