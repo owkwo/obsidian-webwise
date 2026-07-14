@@ -1,6 +1,6 @@
 {
   "name": "obsidian-webwise",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "description": "Import Supernotes cards into an Obsidian vault.",
   "main": "main.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "@typescript-eslint/parser": "8.64.0",
     "builtin-modules": "5.3.0",
     "esbuild": "0.28.1",
-    "obsidian": "latest",
+    "obsidian": "1.13.1",
     "tslib": "2.8.1",
     "typescript": "5.9.3"
   },
