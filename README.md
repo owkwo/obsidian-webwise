@@ -1,77 +1,37 @@
-# Obsidian Supernotes
+# obsidian-webwise
 
-Use [Supernotes](https://supernotes.app/) as a captures system for fleeting ideas or other types of quick notes, and
-later import them into [Obsidian](https://obsidian.md).
+obsidian-webwise is an experimental Obsidian plugin for importing Supernotes cards into an Obsidian vault. It downloads cards through the Supernotes API, converts card metadata to flat frontmatter properties, writes note content, and can optionally change the remote card state after import.
 
-## What is Supernotes?
+## Technical stack
 
-[Supernotes](https://supernotes.app/) is a cloud-based, freemium, note-taking tool. Its basic features overlap in some
-degree with [Obsidian](https://obsidian.md): it allows one to add notes with both tags and links to other notes. It also
-supports daily notes, todo lists, and interactive graphs, just to mention some features it shares with Obsidian. It is
-available through [the web](https://my.supernotes.app), and also in the iOS and Android App Stores.
+- TypeScript
+- Obsidian plugin API
+- esbuild
+- Luxon, i18next, and Popper
+- Supernotes HTTP API
 
-## Why Obsidian Supernotes?
+## Development
 
-In principle one could implement a whole note-taking system (such as the [Zettelkästen Method](https://zettelkasten.de/overview/))
-by using *either* Supernotes or Obsidian, alone.
+```sh
+npm install
+npm run build
+npm run dev
+```
 
-There are some limitations on both tools, though, that limit the scope and/or the ease of usage of such approaches.
+Manual testing requires an Obsidian vault and a Supernotes API key. Never commit API keys or a real vault.
 
----
+## Status
 
-#### Obsidian Pros
+Work in progress. One-way download/import is implemented; robust synchronization is not.
 
-- Free *
-- Support templates, scripts
-- Highly customizable through plugins
+## Known limitations
 
-#### Obsidian Cons
+- The package and plugin manifest still use the historical “obsidian-supernotes” identifier; changing it requires a migration plan for existing installations.
+- Synchronization is primarily Supernotes-to-Obsidian and conflict handling is incomplete.
+- Remote deletion/disable operations are destructive and need stronger safeguards.
+- API behavior is not covered by contract tests.
+- Some dependencies and build configuration are from an older Obsidian template.
 
-- Not available in the web (even though one can publish notes to the web, the full Obsidian experience is still pretty 
-  much offline)
-- UX is focused on desktop platforms
-- Mobile experience currently is possible, but lacking in many ways, such as speed and plugin availability
-  - In my experience, even a *read only* vault can be quite hard to setup and use in mobile platforms...
-- Does not easily allow collaboration between individuals or group members (even when paying for an
-  [Obsidian plan](https://obsidian.md/pricing))
+## Next steps
 
-#### Supernotes Pros
-
-- Free †
-- Mobile centric
-- Provides a fully working web interface at https://my.supernotes.app
-- Provides desktop apps for Linux, Windows and macOS
-- Quick and easy to use
-
-#### Supernotes Cons
-
-- Customisation is quite limited
-- No support to plugins or templates
-- Using the free plan, there is a basic limit of just 100 active notes
-
-&ast; For personal use<br/>
-† Limited access; monthly fee for unlimited note cards
-
----
-
-But **by combining both tools** it's possible to have a better workflow, focused on what each tool currently does best:
-- Use Supernotes for quick entering notes, and/or sharing notes with other individuals
-- Use Obsidian for your full personal vault
-
-## How
-
-1. Register into Supernotes
-2. Obtain a Supernotes API key
-3. Install *Obsidian Supernotes* at your Obsidian vault
-4. Go to the plugin's configuration window, and fill out information such as the Supernotes API key and the folder to
-   be used for the synchronization process
-5. Use command XXX to download your notes from Supernotes into your Obsidian vault
-
-## Current Status
-
-*Obsidian Supernotes* currently only supports *downloading* cards from Supernotes into your Obsidian vault.
-
-Full blown synchronisation between Supernotes and Obsidian is not available (yet), but it is entirely possible.
-
-I will consider investing more time in this plugin, if other people become interested in it. For now, only the basic
-features described above are available.
+Define identity and conflict rules, add dry-run and backup behavior, test API failures and rate limits, modernize the build stack, remove undocumented API assumptions, and publish signed/versioned releases.
