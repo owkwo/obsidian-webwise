@@ -1,6 +1,6 @@
 # obsidian-webwise
 
-obsidian-webwise is an experimental Obsidian plugin for importing Supernotes cards into an Obsidian vault. It downloads cards through the Supernotes API, converts card metadata to flat frontmatter properties, writes note content, and can optionally change the remote card state after import.
+obsidian-webwise is an experimental Obsidian plugin for integrations with external web services and cloud tools. The first feature set targets Supernotes: it downloads cards through the Supernotes API, converts card metadata to flat frontmatter properties, writes note content, and can optionally change the remote card state after import. Bidirectional synchronization is planned.
 
 ## Technical stack
 

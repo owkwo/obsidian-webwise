@@ -2,7 +2,7 @@
 
 ## Purpose
 
-**obsidian-webwise** is a TypeScript Supernotes-to-Obsidian integration. This document records the inferred product boundary and current engineering state; source code and tests remain authoritative where they disagree.
+**obsidian-webwise** is a TypeScript Obsidian plugin for integrations with external web services and cloud tools. Supernotes synchronization (bidirectional) is the first planned feature set. This document records the inferred product boundary and current engineering state; source code and tests remain authoritative where they disagree.
 
 ## Current status
 

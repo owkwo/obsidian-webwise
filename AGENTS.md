@@ -2,7 +2,7 @@
 
 ## Repository
 
-This repository is **obsidian-webwise**, a TypeScript Supernotes-to-Obsidian integration. The repository slug is the canonical project name in documentation and release metadata.
+This repository is **obsidian-webwise**, a TypeScript Obsidian plugin for integrations with external web services and cloud tools. Supernotes synchronization (bidirectional) is the first planned feature set. The repository slug is the canonical project name in documentation and release metadata.
 
 ## Working rules
 
